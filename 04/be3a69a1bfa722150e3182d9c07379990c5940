@@ -1,0 +1,14 @@
+.gitignore
+  h_bb4462688d3a69 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "04be3a69a1bfa722150e3182d9c07379990c5940",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
