@@ -1,0 +1,58 @@
+backend/apps/financial_events/models.py
+  h_bb4462688d3a69 1,4-74
+.gitignore
+  h_bb4462688d3a69 11
+  s_3b062f3b150255::t_014a11978b1836 1-10,12-34
+backend/apps/users/apps.py
+  s_3b062f3b150255::t_ffc40d70f040db 4
+  h_bb4462688d3a69 5-7
+backend/config/settings.py
+  h_bb4462688d3a69 1-12,14-45,57-90,101-141
+  s_3b062f3b150255::t_7d23621448375f 13,46-56,91-100
+backend/apps/artifacts/apps.py
+  s_3b062f3b150255::t_6ed09d8b0ab969 4-5
+backend/.env.example
+  s_3b062f3b150255::t_ea4405c50c14fa 2-3,9-13
+  h_bb4462688d3a69 1,4-8
+backend/apps/users/models.py
+  h_bb4462688d3a69 1-4,7-41
+backend/apps/financial_events/apps.py
+  s_3b062f3b150255::t_c549af93eff427 4-5
+backend/apps/users/managers.py
+  h_bb4462688d3a69 1-31
+backend/config/api.py
+  h_bb4462688d3a69 1-3
+backend/shared/models/mixins.py
+  h_bb4462688d3a69 1-31
+backend/.dockerignore
+  s_3b062f3b150255::t_33f44265e4b1d9 1-4,6-7
+  h_bb4462688d3a69 5
+docker-compose.yml
+  s_3b062f3b150255::t_bc62fdeb7e2c2f 1,4,8,18-19,22
+  h_bb4462688d3a69 2-3,5-7,9-17,20-21
+backend/apps/artifacts/models.py
+  h_bb4462688d3a69 1,4-49
+backend/config/urls.py
+  s_3b062f3b150255::t_b97acfc534d0eb 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "d8e750961a61fdd240f23dc816b975aea74d2768",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_3b062f3b150255": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019eea8c-1638-7a43-8947-9c1c2dcb34fc",
+        "model": "gpt-5.4-mini"
+      },
+      "human_author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
