@@ -1,0 +1,42 @@
+backend/apps/artifacts/repository.py
+  h_bb4462688d3a69 1-36
+backend/apps/artifacts/parsers/pdf_parser.py
+  h_bb4462688d3a69 1-30
+backend/apps/artifacts/schemas.py
+  h_bb4462688d3a69 1-34
+backend/apps/artifacts/processing_service.py
+  h_bb4462688d3a69 1-3
+backend/apps/artifacts/router.py
+  h_bb4462688d3a69 1-50
+backend/config/api.py
+  h_bb4462688d3a69 3-14
+backend/apps/artifacts/parsers/registry.py
+  h_bb4462688d3a69 1-22
+backend/apps/financial_events/router.py
+  h_bb4462688d3a69 1-50
+backend/apps/financial_events/schemas.py
+  h_bb4462688d3a69 1-45
+backend/config/urls.py
+  h_bb4462688d3a69 3
+backend/apps/financial_events/repository.py
+  h_bb4462688d3a69 1-38
+backend/apps/artifacts/service.py
+  h_bb4462688d3a69 1-48
+backend/apps/artifacts/parsers/base.py
+  h_bb4462688d3a69 1-13
+backend/apps/financial_events/service.py
+  h_bb4462688d3a69 1-54
+backend/apps/artifacts/parsers/contracts.py
+  h_bb4462688d3a69 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "0ae8e57ba1955f76ccbc5352efc49a89043e65cd",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
