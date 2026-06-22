@@ -14,6 +14,10 @@ class ArtifactStatus(models.TextChoices):
     PROCESSED = "PROCESSED", "Processed"
     FAILED = "FAILED", "Failed"
 
+class FileType(models.TextChoices):
+    PDF = "PDF", "PDF"
+    CSV = "CSV", "CSV"
+    XLSX = "XLSX", "XLSX"
 
 class Artifact(
     UUIDMixin,
@@ -31,7 +35,8 @@ class Artifact(
     )
 
     file_type = models.CharField(
-        max_length=50,
+        max_length=20,
+        choices=FileType.choices,
     )
 
     status = models.CharField(
@@ -41,6 +46,11 @@ class Artifact(
     )
 
     storage_path = models.TextField()
+
+    error_message = models.TextField(
+        null=True,
+        blank=True,
+    )
 
     class Meta:
         db_table = "artifacts"
