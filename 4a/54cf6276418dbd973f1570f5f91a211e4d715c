@@ -1,0 +1,16 @@
+backend/apps/artifacts/processing_service.py
+  h_bb4462688d3a69 1,3-76,78-91
+backend/apps/financial_events/repository.py
+  h_bb4462688d3a69 13,22-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "4a54cf6276418dbd973f1570f5f91a211e4d715c",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
