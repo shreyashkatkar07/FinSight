@@ -1,0 +1,30 @@
+backend/config/api.py
+  h_bb4462688d3a69 4-5
+backend/apps/ingestion/router.py
+  h_bb4462688d3a69 1-24
+backend/apps/financial_events/repository.py
+  h_bb4462688d3a69 2-10,23,40,57
+backend/apps/financial_events/service.py
+  h_bb4462688d3a69 2,7-8,13-15,24,61-64
+backend/apps/financial_events/router.py
+  h_bb4462688d3a69 7
+backend/shared/contracts/parsed_transaction.py
+  h_bb4462688d3a69 1-18
+backend/apps/ingestion/schemas.py
+  h_bb4462688d3a69 1-16
+backend/apps/financial_events/schemas.py
+  h_bb4462688d3a69 9-10,12,14,16,18,25-27
+backend/apps/ingestion/service.py
+  h_bb4462688d3a69 1-95
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.11",
+  "base_commit_sha": "dc1ad32f299ee2401f9247f7b02b6b5efb84e40d",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
