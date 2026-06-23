@@ -6,17 +6,25 @@ from ninja import Schema
 
 
 class FinancialEventCreateIn(Schema):
+    merchant: str
+
     amount: Decimal
+
     event_type: str
+
     description: str
+
     transaction_date: date
+
     currency: str = "INR"
 
 
 class FinancialEventCreateDTO(Schema):
     user_id: int
 
-    artifact_id: int
+    artifact_id: int | None = None
+
+    merchant: str
 
     amount: Decimal
 
@@ -31,6 +39,7 @@ class FinancialEventCreateDTO(Schema):
 
 class FinancialEventOut(Schema):
     uuid: UUID
+    merchant: str
 
     amount: Decimal
 
@@ -45,3 +54,19 @@ class FinancialEventOut(Schema):
 
 class FinancialEventListFilter(Schema):
     event_type: str | None = None
+
+
+class PeriodOut(Schema):
+    start_date: date
+
+    end_date: date
+
+
+class FinancialSummaryOut(Schema):
+    period: PeriodOut
+
+    total_income: Decimal
+
+    total_expense: Decimal
+
+    net_flow: Decimal

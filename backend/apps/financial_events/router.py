@@ -4,6 +4,7 @@ from uuid import UUID
 from apps.financial_events.schemas import (
     FinancialEventCreateIn,
     FinancialEventOut,
+    FinancialSummaryOut,
 )
 
 from apps.financial_events import service
@@ -22,6 +23,18 @@ def create_financial_event(
     return service.create_financial_event(
         user_id=1,
         event_data=payload,
+    )
+
+
+@router.get(
+    "/summary",
+    response=FinancialSummaryOut,
+)
+def get_summary(
+    request,
+):
+    return service.get_summary(
+        user_id=1,
     )
 
 

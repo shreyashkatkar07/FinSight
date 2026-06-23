@@ -33,6 +33,12 @@ class FinancialEvent(
         blank=True,
     )
 
+    merchant = models.CharField(
+        max_length=255,
+        db_index=True,
+        default="UNKNOWN",
+    )
+
     amount = models.DecimalField(
         max_digits=12,
         decimal_places=2,
@@ -68,7 +74,7 @@ class FinancialEvent(
 
     def __str__(self) -> str:
         return (
+            f"{self.merchant} | "
             f"{self.event_type} | "
-            f"{self.amount} {self.currency} | "
-            f"{self.transaction_date}"
+            f"{self.amount} {self.currency}"
         )
