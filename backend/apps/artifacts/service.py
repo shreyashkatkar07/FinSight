@@ -5,6 +5,12 @@ from apps.artifacts.schemas import (
     ArtifactCreateIn,
 )
 
+from apps.artifacts.processing_service import (
+    process_artifact as process_artifact_workflow,
+)
+from apps.artifacts.schemas import (
+    ArtifactProcessResponse,
+)
 
 def create_artifact(
     *,
@@ -45,4 +51,19 @@ def get_artifacts(
 ):
     return repository.get_artifacts(
         user_id=user_id,
+    )
+
+
+def process_artifact(
+    *,
+    artifact_uuid,
+):
+    events_created = process_artifact_workflow(
+        artifact_uuid=artifact_uuid,
+    )
+
+    return ArtifactProcessResponse(
+        artifact_uuid=artifact_uuid,
+        status="PROCESSED",
+        events_created=events_created,
     )

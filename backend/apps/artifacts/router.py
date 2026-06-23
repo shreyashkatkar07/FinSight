@@ -7,6 +7,7 @@ from apps.artifacts import service
 from apps.artifacts.schemas import (
     ArtifactCreateIn,
     ArtifactOut,
+    ArtifactProcessResponse,
 )
 
 router = Router()
@@ -47,4 +48,17 @@ def get_artifacts(
 ):
     return service.get_artifacts(
         user_id=1,
+    )
+
+
+@router.post(
+    "/{artifact_uuid}/process",
+    response=ArtifactProcessResponse,
+)
+def process_artifact(
+    request,
+    artifact_uuid: UUID,
+):
+    return service.process_artifact(
+        artifact_uuid=artifact_uuid,
     )
