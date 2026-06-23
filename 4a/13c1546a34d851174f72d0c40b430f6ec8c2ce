@@ -1,0 +1,16 @@
+backend/apps/artifacts/service.py
+  h_bb4462688d3a69 8-13
+backend/apps/artifacts/router.py
+  h_bb4462688d3a69 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.11",
+  "base_commit_sha": "4a13c1546a34d851174f72d0c40b430f6ec8c2ce",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
