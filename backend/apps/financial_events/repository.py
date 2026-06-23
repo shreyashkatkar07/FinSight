@@ -10,11 +10,34 @@ def create_financial_event(
 ) -> FinancialEvent:
     return FinancialEvent.objects.create(
         user_id=create_dto.user_id,
+        artifact_id=create_dto.artifact_id,
         amount=create_dto.amount,
         currency=create_dto.currency,
         event_type=create_dto.event_type,
         description=create_dto.description,
         transaction_date=create_dto.transaction_date,
+    )
+
+
+def create_financial_events(
+    *,
+    create_dtos: list[FinancialEventCreateDTO],
+):
+    events = [
+        FinancialEvent(
+            user_id=create_dto.user_id,
+            artifact_id=create_dto.artifact_id,
+            amount=create_dto.amount,
+            currency=create_dto.currency,
+            event_type=create_dto.event_type,
+            description=create_dto.description,
+            transaction_date=create_dto.transaction_date,
+        )
+        for create_dto in create_dtos
+    ]
+
+    return FinancialEvent.objects.bulk_create(
+        events,
     )
 
 

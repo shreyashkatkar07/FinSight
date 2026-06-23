@@ -16,6 +16,8 @@ class FinancialEventCreateIn(Schema):
 class FinancialEventCreateDTO(Schema):
     user_id: int
 
+    artifact_id: int
+
     amount: Decimal
 
     currency: str
