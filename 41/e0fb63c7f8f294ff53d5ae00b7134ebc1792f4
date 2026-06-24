@@ -1,0 +1,20 @@
+backend/apps/financial_events/insights_service.py
+  h_bb4462688d3a69 1-79,81-155
+backend/apps/financial_events/analytics_service.py
+  h_bb4462688d3a69 1-54
+backend/apps/financial_events/router.py
+  h_bb4462688d3a69 8-9,13-15
+backend/.env.example
+  h_bb4462688d3a69 14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "41e0fb63c7f8f294ff53d5ae00b7134ebc1792f4",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
