@@ -26,7 +26,7 @@ def parse_text(
 ) -> ParsedTransaction:
     tokens = text.split()
 
-    merchant = tokens[0]
+    merchant = tokens[0].strip().title()
 
     amount = None
     amount_index = None

@@ -115,3 +115,22 @@ def get_summary(
         "total_expense": summary["total_expense"]
         or Decimal("0"),
     }
+
+
+def get_top_merchants(
+    *,
+    user_id: int,
+    limit: int = 10,
+):
+    return (
+        FinancialEvent.objects.filter(
+            user_id=user_id,
+            is_active=True,
+            event_type="DEBIT",
+        )
+        .values("merchant")
+        .annotate(
+            total_amount=Sum("amount"),
+        )
+        .order_by("-total_amount")[:limit]
+    )

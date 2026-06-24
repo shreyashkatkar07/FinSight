@@ -70,3 +70,13 @@ class FinancialSummaryOut(Schema):
     total_expense: Decimal
 
     net_flow: Decimal
+
+
+class TopMerchantOut(Schema):
+    merchant: str
+
+    total_amount: Decimal
+
+
+class InsightsOut(Schema):
+    insights: list[str]

@@ -5,9 +5,16 @@ from apps.financial_events.schemas import (
     FinancialEventCreateIn,
     FinancialEventOut,
     FinancialSummaryOut,
+    TopMerchantOut,
+    InsightsOut,
 )
 
-from apps.financial_events import service
+from apps.financial_events import (
+    service,
+    analytics_service,
+    insights_service,
+)
+
 
 router = Router()
 
@@ -33,7 +40,30 @@ def create_financial_event(
 def get_summary(
     request,
 ):
-    return service.get_summary(
+    return analytics_service.get_summary(
+        user_id=1,
+    )
+
+@router.get(
+    "/top-merchants",
+    response=list[TopMerchantOut],
+)
+def get_top_merchants(
+    request,
+):
+    return analytics_service.get_top_merchants(
+        user_id=1,
+    )
+
+
+@router.get(
+    "/insights",
+    response=InsightsOut,
+)
+def get_insights(
+    request,
+):
+    return insights_service.get_insights(
         user_id=1,
     )
 

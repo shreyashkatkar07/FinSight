@@ -35,6 +35,10 @@ def env_list(name: str, default: str = "") -> list[str]:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-dev-only-change-me")
 
+GEMINI_API_KEY = os.getenv(
+    "GEMINI_API_KEY",
+)
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env_bool("DEBUG", "False")
 

@@ -80,38 +80,3 @@ def create_from_parsed_transaction(
         create_dto=create_dto,
     )
 
-
-def get_summary(
-    *,
-    user_id: int,
-):
-    today = date.today()
-
-    start_date = date(
-        year=today.year,
-        month=today.month,
-        day=1,
-    )
-
-    summary = repository.get_summary(
-        user_id=user_id,
-        start_date=start_date,
-        end_date=today,
-    )
-
-    total_income = summary["total_income"]
-
-    total_expense = summary["total_expense"]
-
-    return FinancialSummaryOut(
-        period=PeriodOut(
-            start_date=start_date,
-            end_date=today,
-        ),
-        total_income=total_income,
-        total_expense=total_expense,
-        net_flow=(
-            total_income
-            - total_expense
-        ),
-    )
