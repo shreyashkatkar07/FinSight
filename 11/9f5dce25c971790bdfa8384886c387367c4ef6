@@ -1,0 +1,54 @@
+frontend/src/components/dashboard/RecentTransactions.tsx
+  h_bb4462688d3a69 1-58
+frontend/src/components/dashboard/AddTransaction.tsx
+  h_bb4462688d3a69 1-82
+frontend/src/pages/Dashboard.tsx
+  h_bb4462688d3a69 1-33
+frontend/src/hooks/useTopMerchants.ts
+  h_bb4462688d3a69 1-10
+frontend/src/api/ingestion.ts
+  h_bb4462688d3a69 1-14
+frontend/src/hooks/index.ts
+  h_bb4462688d3a69 1-5
+frontend/src/components/dashboard/SummaryCards.tsx
+  h_bb4462688d3a69 1-67
+frontend/src/hooks/useSummary.ts
+  h_bb4462688d3a69 1-10
+frontend/src/components/dashboard/Insights.tsx
+  h_bb4462688d3a69 1-56
+frontend/src/components/dashboard/TopMerchants.tsx
+  h_bb4462688d3a69 1-60
+frontend/src/index.css
+  h_bb4462688d3a69 1
+frontend/vite.config.ts
+  h_bb4462688d3a69 1-10
+frontend/src/api/financialEvents.ts
+  h_bb4462688d3a69 1-36
+frontend/src/main.tsx
+  h_bb4462688d3a69 1-20
+frontend/src/api/index.ts
+  h_bb4462688d3a69 1-2
+frontend/src/api/client.ts
+  h_bb4462688d3a69 1-42
+frontend/src/App.tsx
+  h_bb4462688d3a69 1-5
+frontend/src/types/financial.ts
+  h_bb4462688d3a69 1-28
+frontend/src/hooks/useTransactions.ts
+  h_bb4462688d3a69 1-10
+frontend/src/lib/react-query.ts
+  h_bb4462688d3a69 1-11
+frontend/src/hooks/useInsights.ts
+  h_bb4462688d3a69 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "119f5dce25c971790bdfa8384886c387367c4ef6",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
