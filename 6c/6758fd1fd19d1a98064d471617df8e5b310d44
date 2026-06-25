@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "6c6758fd1fd19d1a98064d471617df8e5b310d44",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
