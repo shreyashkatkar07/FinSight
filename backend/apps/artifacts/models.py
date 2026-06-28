@@ -11,10 +11,12 @@ from shared.models.mixins import (
 class ArtifactStatus(models.TextChoices):
     UPLOADED = "UPLOADED", "Uploaded"
     PROCESSING = "PROCESSING", "Processing"
-    PROCESSED = "PROCESSED", "Processed"
+    COMPLETED = "COMPLETED", "Completed"
     FAILED = "FAILED", "Failed"
 
 class FileType(models.TextChoices):
+    IMAGE = "IMAGE", "Image"
+    TEXT = "TEXT", "Text"
     PDF = "PDF", "PDF"
     CSV = "CSV", "CSV"
     XLSX = "XLSX", "XLSX"

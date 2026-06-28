@@ -1,13 +1,15 @@
-from abc import ABC, abstractmethod
+from abc import ABC
+from abc import abstractmethod
 
 from apps.artifacts.models import Artifact
 
 
-class BaseParser(ABC):
+class BaseExtractor(ABC):
 
     @abstractmethod
-    def parse(
+    def extract(
         self,
+        *,
         artifact: Artifact,
-    ):
+    ) -> str:
         pass

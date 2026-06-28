@@ -1,6 +1,7 @@
 from uuid import UUID
 
-from ninja import Router
+from ninja import Router, File
+from ninja.files import UploadedFile
 
 from apps.artifacts import service
 
@@ -8,21 +9,23 @@ from apps.artifacts.schemas import (
     ArtifactCreateIn,
     ArtifactOut,
     ArtifactProcessResponse,
+    ArtifactUploadOut,
 )
 
 router = Router()
 
+
 @router.post(
-    "/",
-    response=ArtifactOut,
+    "/upload",
+    response=ArtifactUploadOut,
 )
-def create_artifact(
+def upload_artifact(
     request,
-    payload: ArtifactCreateIn,
+    file: UploadedFile = File(...),
 ):
-    return service.create_artifact(
+    return service.upload_artifact(
         user_id=1,
-        artifact_data=payload,
+        file=file,
     )
 
 

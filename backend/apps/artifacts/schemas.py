@@ -32,3 +32,10 @@ class ArtifactProcessResponse(Schema):
     artifact_uuid: UUID
     status: str
     events_created: int
+
+
+class ArtifactUploadOut(Schema):
+    artifact_uuid: UUID
+    file_name: str
+    file_type: str
+    status: str
