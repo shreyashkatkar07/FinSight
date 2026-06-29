@@ -1,0 +1,30 @@
+backend/apps/artifacts/confirmation/service.py
+  h_bb4462688d3a69 1-72
+backend/apps/artifacts/router.py
+  h_bb4462688d3a69 13-21
+backend/apps/artifacts/processing_service.py
+  h_bb4462688d3a69 7-11,18
+backend/apps/artifacts/confirmation/schemas.py
+  h_bb4462688d3a69 1-17
+backend/shared/enums.py
+  h_bb4462688d3a69 1-12
+backend/apps/artifacts/service.py
+  h_bb4462688d3a69 20-22,25
+backend/apps/artifacts/schemas.py
+  h_bb4462688d3a69 4
+backend/apps/artifacts/extraction/provider.py
+  h_bb4462688d3a69 1-13
+backend/apps/artifacts/transaction_extraction/prompts.py
+  h_bb4462688d3a69 4,7-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "7f82abd92dd40108410a39b01df447770b33a1da",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
