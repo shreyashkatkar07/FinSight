@@ -3,7 +3,7 @@ from pathlib import Path
 
 from django.conf import settings
 
-from .ocr import reader
+from .provider import reader
 from .schemas import ExtractionResult
 
 

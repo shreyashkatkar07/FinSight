@@ -32,6 +32,8 @@ class FinancialEventCreateDTO(Schema):
 
     event_type: str
 
+    category: str
+
     description: str
 
     transaction_date: date
@@ -39,6 +41,7 @@ class FinancialEventCreateDTO(Schema):
 
 class FinancialEventOut(Schema):
     uuid: UUID
+    
     merchant: str
 
     amount: Decimal
@@ -46,6 +49,8 @@ class FinancialEventOut(Schema):
     currency: str
 
     event_type: str
+
+    category: str
 
     description: str
 

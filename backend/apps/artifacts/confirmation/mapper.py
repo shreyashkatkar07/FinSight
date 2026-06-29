@@ -3,10 +3,10 @@ from apps.financial_events.schemas import (
 )
 
 
-def to_financial_event_dto(
+def to_financial_event_create_dto(
     *,
-    transaction,
     artifact,
+    transaction,
 ) -> FinancialEventCreateDTO:
 
     return FinancialEventCreateDTO(
@@ -16,6 +16,7 @@ def to_financial_event_dto(
         amount=transaction.amount,
         currency=transaction.currency.value,
         event_type=transaction.event_type.value,
+        category=transaction.category.value,
         description=transaction.description,
         transaction_date=transaction.transaction_date,
     )

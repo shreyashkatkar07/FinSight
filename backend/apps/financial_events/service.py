@@ -25,6 +25,7 @@ def create_financial_event(
         amount=event_data.amount,
         currency=event_data.currency,
         event_type=event_data.event_type,
+        category=event_data.category.value,
         description=event_data.description,
         transaction_date=event_data.transaction_date,
     )
@@ -72,6 +73,7 @@ def create_from_parsed_transaction(
         amount=parsed_transaction.amount,
         currency=parsed_transaction.currency,
         event_type=parsed_transaction.event_type,
+        category=parsed_transaction.category.value,
         description=parsed_transaction.description,
         transaction_date=parsed_transaction.transaction_date,
     )

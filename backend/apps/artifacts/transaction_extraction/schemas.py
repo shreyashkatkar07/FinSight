@@ -3,6 +3,7 @@ from decimal import Decimal
 from enum import Enum
 
 from pydantic import BaseModel
+from shared.enums import Category
 
 
 class EventType(str, Enum):
@@ -21,6 +22,8 @@ class ExtractedTransaction(BaseModel):
     amount: Decimal
     currency: Currency
     event_type: EventType
+    confidence: float
+    category: Category
     description: str | None = None
     transaction_date: date | None = None
 

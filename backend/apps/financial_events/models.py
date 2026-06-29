@@ -7,6 +7,7 @@ from shared.models.mixins import (
     TimestampMixin,
     ActiveFlagMixin,
 )
+from shared.enums import Category
 
 
 class EventType(models.TextChoices):
@@ -52,6 +53,12 @@ class FinancialEvent(
     event_type = models.CharField(
         max_length=20,
         choices=EventType.choices,
+    )
+
+    category = models.CharField(
+        max_length=30,
+        choices=Category.choices,
+        default=Category.OTHER,
     )
 
     description = models.TextField()

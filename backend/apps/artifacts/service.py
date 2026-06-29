@@ -14,12 +14,22 @@ from apps.artifacts.schemas import (
     ArtifactUploadOut,
 )
 
-from apps.artifacts.processing_service import (
-    process_artifact as process_artifact_workflow,
+from apps.artifacts.extraction_service import (
+    extract_artifact as extract_artifact_workflow,
 )
-from apps.artifacts.schemas import (
-    ArtifactProcessResponse,
+
+from apps.artifacts.confirmation.service import (
+    confirm_extraction as confirm_extraction_workflow,
 )
+
+from apps.artifacts.transaction_extraction.schemas import (
+    ExtractionResponse,
+)
+
+from apps.artifacts.confirmation.schemas import (
+    ConfirmExtractionRequest,
+)
+
 
 def create_artifact(
     *,
@@ -66,15 +76,9 @@ def get_artifacts(
 def process_artifact(
     *,
     artifact_uuid,
-):
-    events_created = process_artifact_workflow(
+) -> ExtractionResponse:
+    return extract_artifact_workflow(
         artifact_uuid=artifact_uuid,
-    )
-
-    return ArtifactProcessResponse(
-        artifact_uuid=artifact_uuid,
-        status="PROCESSED",
-        events_created=events_created,
     )
 
 
@@ -134,4 +138,15 @@ def upload_artifact(
         file_name=artifact.file_name,
         file_type=artifact.file_type,
         status=artifact.status,
+    )
+
+
+def confirm_extraction(
+    *,
+    artifact_uuid,
+    payload: ConfirmExtractionRequest,
+):
+    return confirm_extraction_workflow(
+        artifact_uuid=artifact_uuid,
+        payload=payload,
     )

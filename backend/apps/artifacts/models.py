@@ -11,6 +11,7 @@ from shared.models.mixins import (
 class ArtifactStatus(models.TextChoices):
     UPLOADED = "UPLOADED", "Uploaded"
     PROCESSING = "PROCESSING", "Processing"
+    REVIEW_PENDING = "REVIEW_PENDING", "Review Pending"
     COMPLETED = "COMPLETED", "Completed"
     FAILED = "FAILED", "Failed"
 

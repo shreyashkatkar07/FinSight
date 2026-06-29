@@ -6,10 +6,17 @@ from ninja.files import UploadedFile
 from apps.artifacts import service
 
 from apps.artifacts.schemas import (
-    ArtifactCreateIn,
     ArtifactOut,
-    ArtifactProcessResponse,
     ArtifactUploadOut,
+)
+
+from apps.artifacts.transaction_extraction.schemas import (
+    ExtractionResponse,
+)
+
+from apps.artifacts.confirmation.schemas import (
+    ConfirmExtractionRequest,
+    ConfirmExtractionResponse,
 )
 
 router = Router()
@@ -55,8 +62,8 @@ def get_artifacts(
 
 
 @router.post(
-    "/{artifact_uuid}/process",
-    response=ArtifactProcessResponse,
+    "/{artifact_uuid}/extract",
+    response=ExtractionResponse,
 )
 def process_artifact(
     request,
@@ -64,4 +71,19 @@ def process_artifact(
 ):
     return service.process_artifact(
         artifact_uuid=artifact_uuid,
+    )
+
+
+@router.post(
+    "/{artifact_uuid}/confirm",
+    response=ConfirmExtractionResponse,
+)
+def confirm_extraction(
+    request,
+    artifact_uuid: UUID,
+    payload: ConfirmExtractionRequest,
+):
+    return service.confirm_extraction(
+        artifact_uuid=artifact_uuid,
+        payload=payload,
     )

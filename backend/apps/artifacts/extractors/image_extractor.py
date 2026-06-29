@@ -13,7 +13,7 @@ class ImageExtractor(BaseExtractor):
 
             ₹250
 
-            To ZOMATO
+            To Zomato
 
             26 June 2026
 
