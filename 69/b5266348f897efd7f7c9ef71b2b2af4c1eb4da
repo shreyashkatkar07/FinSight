@@ -1,0 +1,68 @@
+frontend/src/features/ingestion/types.ts
+  h_bb4462688d3a69 1-30,36
+  s_a48020b38ebed1::t_48ea7dc1730c2c 31-35
+frontend/src/features/ingestion/hooks.ts
+  h_bb4462688d3a69 1-105
+frontend/src/features/ingestion/components/ArtifactUploader.tsx
+  s_a48020b38ebed1::t_d5cd3c0d8129a3 52
+  s_a48020b38ebed1::t_2999c663160607 67
+  s_a48020b38ebed1::t_730db588c23e9a 1-51,53-66,68-83
+frontend/src/features/dashboard/api.ts
+  h_bb4462688d3a69 1-36
+frontend/src/features/dashboard/components/RecentTransactions.tsx
+  h_bb4462688d3a69 1-58
+frontend/src/pages/Dashboard.tsx
+  s_a48020b38ebed1::t_4339dc59d2ed47 26
+  s_a48020b38ebed1::t_a4c351008377f4 1-2,7-12,15-19,27-29
+  h_bb4462688d3a69 3-6
+  s_a48020b38ebed1::t_15f5fa4b787d88 30-32
+frontend/src/features/dashboard/hooks.ts
+  h_bb4462688d3a69 1-31
+frontend/src/features/ingestion/components/ReviewTransactions.tsx
+  s_a48020b38ebed1::t_fabf3c7afafa13 10,12-15,20-22,25,80-81,122-128,130-138,140,153-155,157,170-172,174,210-212,214,233-235,237,255-257,259,262-266,297-298,321-324
+  s_a48020b38ebed1::t_f5cb3af0de11f1 1-9,26-51,114-119
+  s_a48020b38ebed1::t_ba6b9c5eafca3a 53-79
+  s_a48020b38ebed1::t_df115fda52df4a 306-307,314-315,317,319
+  s_a48020b38ebed1::t_4534ddff101154 318
+  s_a48020b38ebed1::t_16417accba7ee2 11,16-19,23-24,52,82-113,120-121,129,139,141-152,156,158-169,173,175-209,213,215-232,236,238-254,258,260-261,267-296,299-305,308-313,316,320
+frontend/src/features/dashboard/components/SummaryCards.tsx
+  h_bb4462688d3a69 1-67
+frontend/src/features/ingestion/api.ts
+  h_bb4462688d3a69 1-43
+frontend/src/features/dashboard/components/Insights.tsx
+  h_bb4462688d3a69 1-7,9-16,34-43,49,56-81
+  s_e65fc14f101041::t_06469f7253541a 8,17-33,44-48,50-55
+frontend/src/api/client.ts
+  h_bb4462688d3a69 2,5-6,8-11,13-17,19,23-56,58-60
+frontend/src/features/dashboard/components/TopMerchants.tsx
+  h_bb4462688d3a69 1-60
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "69b5266348f897efd7f7c9ef71b2b2af4c1eb4da",
+  "prompts": {},
+  "humans": {
+    "h_bb4462688d3a69": {
+      "author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_a48020b38ebed1": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "d624050d-676e-48d7-9fa7-646c7aa75707",
+        "model": "SWE-1.6 Slow"
+      },
+      "human_author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    },
+    "s_e65fc14f101041": {
+      "agent_id": {
+        "tool": "windsurf",
+        "id": "1fae2065-b823-435c-834f-006a1d843680",
+        "model": "SWE-1.6 Slow"
+      },
+      "human_author": "Shreyash Katkar <shreyashkatkar04@gmail.com>"
+    }
+  }
+}
