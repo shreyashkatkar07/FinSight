@@ -1,42 +1,74 @@
 const API_BASE_URL =
-    "http://localhost:8000/api";
+  "http://localhost:8000/api";
 
 async function request<T>(
-    url: string,
-    options?: RequestInit,
+  url: string,
+  options?: RequestInit,
 ): Promise<T> {
-    const response = await fetch(
-        `${API_BASE_URL}${url}`,
-        {
-            headers: {
-                "Content-Type":
-                    "application/json",
-            },
-            ...options,
-        },
+  const response = await fetch(
+    `${API_BASE_URL}${url}`,
+    options,
+  );
+
+  if (!response.ok) {
+    throw new Error(
+      `HTTP ${response.status}`,
     );
+  }
 
-    if (!response.ok) {
-        throw new Error(
-            `HTTP ${response.status}`
-        );
-    }
-
-    return response.json();
+  return response.json();
 }
 
 export function get<T>(
-    url: string,
+  url: string,
 ) {
-    return request<T>(url);
+  return request<T>(url, {
+    method: "GET",
+  });
 }
 
-export function post<T>(
-    url: string,
-    body: unknown,
+export function postJson<T>(
+  url: string,
+  body: unknown,
 ) {
-    return request<T>(url, {
-        method: "POST",
-        body: JSON.stringify(body),
-    });
+  return request<T>(url, {
+    method: "POST",
+    headers: {
+      "Content-Type":
+        "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+}
+
+export function postForm<T>(
+  url: string,
+  formData: FormData,
+) {
+  return request<T>(url, {
+    method: "POST",
+    body: formData,
+  });
+}
+
+export function putJson<T>(
+  url: string,
+  body: unknown,
+) {
+  return request<T>(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type":
+        "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+}
+
+export function deleteRequest<T>(
+  url: string,
+) {
+  return request<T>(url, {
+    method: "DELETE",
+  });
 }

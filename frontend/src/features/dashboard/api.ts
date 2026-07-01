@@ -1,13 +1,13 @@
-import { get } from "./client";
+import { get } from "../../api/client";
 
 import type {
     Summary,
     TopMerchant,
     Insights,
     FinancialEvent,
-} from "../types/financial";
+} from "./types";
 
-export const financialEventsApi = {
+export const dashboardApi = {
 
     getSummary() {
         return get<Summary>(

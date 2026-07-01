@@ -1,4 +1,4 @@
-import { useTopMerchants } from "../../hooks";
+import { useTopMerchants } from "../hooks";
 
 export default function TopMerchants() {
   const {

@@ -1,4 +1,4 @@
-import { useTransactions } from "../../hooks";
+import { useTransactions } from "../hooks";
 
 export default function RecentTransactions() {
   const {

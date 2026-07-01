@@ -23,6 +23,7 @@ export interface FinancialEvent {
   amount: string;
   currency: string;
   event_type: string;
+  category: string;
   description: string;
   transaction_date: string;
 }

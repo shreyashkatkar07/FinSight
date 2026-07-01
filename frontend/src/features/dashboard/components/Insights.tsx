@@ -1,10 +1,11 @@
-import { useInsights } from "../../hooks";
+import { useInsights } from "../hooks"; 
 
 export default function Insights() {
   const {
     data,
     isLoading,
     isError,
+    refetch,
   } = useInsights();
 
   if (isLoading) {
@@ -13,8 +14,23 @@ export default function Insights() {
 
   if (isError || !data) {
     return (
-      <div className="text-red-500">
-        Failed to load insights.
+      <div>
+        <h2 className="mb-4 text-xl font-semibold">
+          AI Insights
+        </h2>
+
+        <div className="rounded-lg border p-4">
+          <p className="text-red-500">
+            Failed to load insights.
+          </p>
+
+          <button
+            onClick={() => refetch()}
+            className="mt-2 rounded border px-3 py-1 text-sm hover:bg-gray-50"
+          >
+            Retry
+          </button>
+        </div>
       </div>
     );
   }
@@ -26,8 +42,17 @@ export default function Insights() {
           AI Insights
         </h2>
 
-        <div className="rounded-lg border p-4 text-gray-500">
-          No insights available.
+        <div className="rounded-lg border p-4">
+          <p className="text-gray-500">
+            No insights available. This may be due to AI model rate limits.
+          </p>
+
+          <button
+            onClick={() => refetch()}
+            className="mt-2 rounded border px-3 py-1 text-sm hover:bg-gray-50"
+          >
+            Retry
+          </button>
         </div>
       </div>
     );

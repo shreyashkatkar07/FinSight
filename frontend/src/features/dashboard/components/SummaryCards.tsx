@@ -1,4 +1,4 @@
-import { useSummary } from "../../hooks";
+import { useSummary } from "../hooks";
 
 export default function SummaryCards() {
   const {
